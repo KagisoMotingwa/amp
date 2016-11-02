@@ -24,7 +24,7 @@ class TestScreeningConsentIdentifierAllocation(TestCase):
     def test_allocate_identifier(self):
 
         ScreeningConsentFactory()
-        ScreeningConsentFactory()
+
         self.assertEqual(RegisteredSubject.objects.filter(subject_identifier='1001243-1').count(), 1)
 
         self.assertEqual(ScreeningConsent.objects.filter(subject_identifier='1001243-1').count(), 1)
